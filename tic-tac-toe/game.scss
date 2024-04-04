@@ -4,8 +4,13 @@
    License: none (public domain)
 */
 
-$dark-color-bg :  #222223;
-$dark-color-cell: #fff9f0;
+$dark-color-bg :     #1e1e28;
+$dark-color-cell:    #fff9f0;
+$dark-color-player1: #15F5BA;
+$dark-color-player2: #6528F7;
+$dark-color-title1:  #836FFF;
+$dark-color-title2:  #FF3EA5;
+$dark-color-title3:  #EBF400;
 
 $border-radius: .5rem;
 
@@ -19,6 +24,10 @@ $border-radius: .5rem;
 	vertical-align: baseline;
     line-height: 1;
     list-style: none;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -36,10 +45,37 @@ body {
 
     main {
         display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
         align-items: center;
         justify-content: center;
         height: 100vh;
         width: 100vw;
+
+        section#info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+
+
+            h1 {
+                font-size: 3rem;
+
+                span:nth-of-type(1) {color: $dark-color-title1}
+                span:nth-of-type(2) {color: $dark-color-title2}
+                span:nth-of-type(3) {color: $dark-color-title3}
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                color: $dark-color-cell;
+
+                span.player-1 {color: $dark-color-player1}
+                span.player-2 {color: $dark-color-player2}
+            }
+        }
 
         section#board {
             display: grid;
@@ -47,14 +83,22 @@ body {
             gap: .5rem;
 
             div.cell {
-                width: 10rem;
-                height: 10rem;
+                width: 8rem;
+                height: 8rem;
                 background-color: $dark-color-cell;
+                color: $dark-color-bg;
+                font-size: 5rem;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             div.cell:nth-of-type(1) {border-radius: $border-radius 0 0 0}
             div.cell:nth-of-type(3) {border-radius: 0 $border-radius 0 0}
             div.cell:nth-of-type(7) {border-radius: 0 0 0 $border-radius}
             div.cell:nth-of-type(9) {border-radius: 0 0 $border-radius 0}
+            div.player-1 {color: $dark-color-player1}
+            div.player-2 {color: $dark-color-player2}
         }
     }
 }
