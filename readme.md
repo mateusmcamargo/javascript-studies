@@ -11,7 +11,7 @@
 >
 >> #### assuntos estudados:
 >>
->> - diferentes temas de cores usando **classList()** e **<select>**
+>> - diferentes temas de cores usando **classList()** e **select**
 >> - uso do objeto **Date** para obtenção de horários
 >> - identação dos números no relógio
 
