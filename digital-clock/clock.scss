@@ -1,0 +1,125 @@
+/* RESET CSS
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+$dark-color-bg1:   #352F44;
+$dark-color-bg2:   #352F44;
+$dark-color-clock: #FAF0E6;
+$dark-color-num:   #31363F;
+$dark-color-sign:  #B9B4C7;
+
+$neon-color-bg1:   #F0F3FF;
+$neon-color-bg2:   #F0F3FF;
+$neon-color-clock: #15F5BA;
+$neon-color-num:   #211951;
+$neon-color-sign:  #836FFF;
+
+$light-color-bg1:   #efcccc;
+$light-color-bg2:   #efcccc;
+$light-color-clock: #F875AA;
+$light-color-num:   #FFF6F6;
+$light-color-sign:  #8ec2e3;
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    list-style: none;
+    line-height: 1;
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, $dark-color-bg1 0%, $dark-color-bg2 100%);
+    user-select: none;
+
+    header {
+        position: absolute;
+        top: 5vh;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h1 {
+            color: $dark-color-clock;
+
+            span {
+                color: $dark-color-sign;
+            }
+        }
+
+        select:focus {
+            outline: none;
+        }
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        padding: 2rem;
+
+        div {
+            font-size: 78px;
+            color: $dark-color-sign;
+            cursor: default;
+        }
+        div.num {
+            background-color: $dark-color-clock;
+            color: $dark-color-num;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        div.period {
+            font-size: 32px;
+            font-weight: 600;
+            align-self: flex-start;
+            padding: 0 .6rem;
+            position: absolute;
+            left: 65vw;
+        }
+    }
+
+    footer {
+        position: absolute;
+        top: 95vh;
+
+        a {
+            color: $dark-color-clock;
+            font-size: 16px;
+        }
+    }
+}
+body.theme-light {
+    background: linear-gradient(90deg, $light-color-bg1 0%, $light-color-bg2 100%);
+    header {h1  {color: $dark-color-num;   span    {color:            $light-color-clock}}}
+    main   {div {color: $light-color-sign} div.num {background-color: $light-color-clock; color: $light-color-num}}
+    footer {a   {color: $light-color-clock}}
+}
+body.theme-neon {
+    background: linear-gradient(90deg, $neon-color-bg1 0%, $neon-color-bg2 100%);
+    header {h1  {color: $neon-color-sign; span    {color:            $neon-color-clock}}}
+    main   {div {color: $neon-color-sign} div.num {background-color: $neon-color-clock; color: $neon-color-num}}
+    footer {a   {color: $neon-color-sign}}
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <link rel="stylesheet" href="./clock.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <h1>press <span>space</span> to hide this tab</h1>
+        <select name="theme" id="theme">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+            <option value="neon">Neon</option>
+        </select><!--theme-->
+    </header>
+
+    <main id="clock">
+        <div class="num"><span id="hours">00</span></div>
+        <div class="colon">&colon;</div>
+        <div class="num"><span id="minutes">00</span></div>
+        <div class="colon">&colon;</div>
+        <div class="num"><span id="seconds">00</span></div>
+        <div class="period">am</div>
+    </main><!--clock-->
+
+    <script src="./clock.js"></script>
+
+    <footer>
+        <p><a href="https://github.com/mateusmcamargo" target="_blank" title="open github in new tab">@mateusmcamargo</a></p>
+    </footer>
+</body>
+</html>

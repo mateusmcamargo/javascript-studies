@@ -1,0 +1,129 @@
+/* RESET CSS
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+  line-height: 1;
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #352F44 0%, #352F44 100%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body header {
+  position: absolute;
+  top: 5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body header h1 {
+  color: #FAF0E6;
+}
+body header h1 span {
+  color: #B9B4C7;
+}
+body header select:focus {
+  outline: none;
+}
+body main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  padding: 2rem;
+}
+body main div {
+  font-size: 78px;
+  color: #B9B4C7;
+  cursor: default;
+}
+body main div.num {
+  background-color: #FAF0E6;
+  color: #31363F;
+  padding: 1rem;
+  border-radius: 10px;
+}
+body main div.period {
+  font-size: 32px;
+  font-weight: 600;
+  align-self: flex-start;
+  padding: 0 0.6rem;
+  position: absolute;
+  left: 65vw;
+}
+body footer {
+  position: absolute;
+  top: 95vh;
+}
+body footer a {
+  color: #FAF0E6;
+  font-size: 16px;
+}
+
+body.theme-light {
+  background: linear-gradient(90deg, #efcccc 0%, #efcccc 100%);
+}
+body.theme-light header h1 {
+  color: #31363F;
+}
+body.theme-light header h1 span {
+  color: #F875AA;
+}
+body.theme-light main div {
+  color: #8ec2e3;
+}
+body.theme-light main div.num {
+  background-color: #F875AA;
+  color: #FFF6F6;
+}
+body.theme-light footer a {
+  color: #F875AA;
+}
+
+body.theme-neon {
+  background: linear-gradient(90deg, #F0F3FF 0%, #F0F3FF 100%);
+}
+body.theme-neon header h1 {
+  color: #836FFF;
+}
+body.theme-neon header h1 span {
+  color: #15F5BA;
+}
+body.theme-neon main div {
+  color: #836FFF;
+}
+body.theme-neon main div.num {
+  background-color: #15F5BA;
+  color: #211951;
+}
+body.theme-neon footer a {
+  color: #836FFF;
+}/*# sourceMappingURL=clock.css.map */

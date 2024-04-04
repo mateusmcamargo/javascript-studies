@@ -1,0 +1,167 @@
+/* 
+CSS RESET 
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*
+$colors: $color-bg-1, $color-bg-2, $color-bg-calc, $color-bg-btn, $color-bg-btn-hover,
+$color-display-text, $color-board-clear, $color-board-light, $color-board-dark, $color-shadow;
+
+@for $i from 1 through length($colors) {
+    .color
+}*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+  line-height: 1;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(90deg, #ff7a01 0%, #ff2849 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+body header#theme section#selector label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+body header#theme section#selector label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+body header#theme section#selector label input:checked + span {
+  background-color: white;
+}
+body header#theme section#selector label input:checked + span:before {
+  transform: translateX(26px);
+  background-color: #F7418F;
+}
+body header#theme section#selector label span {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1c2632;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+body header#theme section#selector label span:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #c23031;
+  border-radius: 50px;
+  transition: 0.2s;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3254901961));
+}
+body main#calculator {
+  width: 320px;
+  height: 480px;
+  background-color: #1c2632;
+  filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.3254901961));
+}
+body main#calculator section#display {
+  width: 100%;
+  height: 20%;
+}
+body main#calculator section#display input {
+  color: white;
+  width: 90%;
+  margin-left: 5%;
+  height: 100%;
+  text-align: right;
+  font-size: 56px;
+  font-size: 56px;
+  background: none;
+}
+body main#calculator section#display input::-moz-placeholder {
+  color: white;
+}
+body main#calculator section#display input::placeholder {
+  color: white;
+}
+body main#calculator section#display input:focus {
+  outline: none;
+}
+body main#calculator section#board {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+body main#calculator section#board button {
+  background-color: #141c27;
+  color: #bac0c9;
+  border: 1px #1c2632 solid;
+  font-size: 18px;
+  font-weight: 600;
+}
+body main#calculator section#board button.clear {
+  color: #c23031;
+}
+body main#calculator section#board .divide, body main#calculator section#board .times, body main#calculator section#board .minus, body main#calculator section#board .plus, body main#calculator section#board .equals {
+  color: #404d5b;
+}
+body main#calculator section#board button:hover {
+  background-color: rgba(24, 32, 43, 0.771);
+}
+body main#calculator section#board button:active {
+  scale: 0.95;
+}
+
+body.theme-light {
+  background: linear-gradient(150deg, #ffe3f6 0%, #ffd4db 100%);
+}
+body.theme-light main#calculator {
+  background-color: #fff;
+}
+body.theme-light main#calculator section#display input {
+  color: #1c2632;
+}
+body.theme-light main#calculator section#display input::-moz-placeholder {
+  color: #1c2632;
+}
+body.theme-light main#calculator section#display input::placeholder {
+  color: #1c2632;
+}
+body.theme-light main#calculator section#board button {
+  background-color: #fff;
+  color: #141c27;
+  border: none;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.1294117647));
+}
+body.theme-light main#calculator section#board button.clear {
+  color: #F7418F;
+}
+body.theme-light main#calculator section#board button.divide, body.theme-light main#calculator section#board .times, body.theme-light main#calculator section#board .minus, body.theme-light main#calculator section#board .plus, body.theme-light main#calculator section#board .equals {
+  color: #bac0c9;
+}
+body.theme-light main#calculator section#board button:hover {
+  background-color: #fff2fa;
+}/*# sourceMappingURL=calculator.css.map */

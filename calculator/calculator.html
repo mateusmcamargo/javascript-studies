@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="./calculator.css">
+</head>
+<body>
+
+    <header id="theme"><!--theme-->
+        <section id="selector">
+            <label for="switch">
+                <input id="switch" type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </section><!--selector-->
+    </header><!--theme-->
+
+    <main id="calculator">
+        <section id="display">
+            <input id="display-input" id type="text" placeholder="0">
+        </section><!--display-->
+
+        <section id="board">
+            <button onclick="clearDisplay()"         class="btn sign clear">C</button>
+            <button onclick="subDisplay()"           class="btn sign delete">&larr;</button>
+            <button onclick="addDisplay('&percnt;')" class="btn sign percent">&percnt;</button>
+            <button onclick="addDisplay('&divide')"  class="btn sign divide">&divide;</button>
+
+            <button onclick="addDisplay('7')"        class="btn number">7</button>
+            <button onclick="addDisplay('8')"        class="btn number">8</button>
+            <button onclick="addDisplay('9')"        class="btn number">9</button>
+            <button onclick="addDisplay('&times')"   class="btn sign times">&times;</button>
+
+            <button onclick="addDisplay('4')"         class="btn number">4</button>
+            <button onclick="addDisplay('5')"         class="btn number">5</button>
+            <button onclick="addDisplay('6')"         class="btn number">6</button>
+            <button onclick="addDisplay('&minus;')"   class="btn sign minus">&minus;</button>
+
+            <button onclick="addDisplay('1')"         class="btn number">1</button>
+            <button onclick="addDisplay('2')"         class="btn number">2</button>
+            <button onclick="addDisplay('3')"         class="btn number">3</button>
+            <button onclick="addDisplay('&plus;')"         class="btn sign plus">&plus;</button>
+
+            <button onclick="addDisplay('0')"         class="btn number">0</button>
+            <button onclick="addDisplay(',')"         class="btn comma">,</button>
+            <button onclick="leftDisplay()"           class="btn left">&lt;</button>
+            <button onclick="equals()"                class="btn equals">&equals;</button>
+        </section><!--board-->
+    </main><!--calculator-->
+
+    <script src="./calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+$color-bg:          #000000;
+$color-gray-light:  #f0f0f0;
+$color-gray-mid:    #a8a8a8;
+$color-gray-dark:   #333333;
+$color-gray-darker: #222222;
+$color-main:        #ff9702;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: $color-bg;
+
+    main {
+
+        section#display {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding: 24px 12px;
+
+            span {
+                color: $color-gray-light;
+                font-size: 96px;
+            }
+        }
+
+        section#board {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+                justify-self: center;
+
+                width:  96px;
+                height: 96px;
+                border: none;
+                border-radius: 50%;
+                font-size: 32px;
+                font-weight: 600;
+                margin: 6px 0;
+
+                cursor: pointer;
+            }
+            button.mid {
+                background-color: $color-gray-mid;
+                color: $color-gray-darker;
+            }
+            button.dark {
+                background-color: $color-gray-dark;
+                color: $color-gray-light;
+            }
+            button.main {
+                background-color: $color-main;
+                color: $color-gray-light;
+            }
+            button.wide {
+                justify-content: left;
+                padding-left: 40px;
+                width: 200px;
+                border-radius: 100px;
+                grid-column: span 2;
+            }
+        }
+    }
+}

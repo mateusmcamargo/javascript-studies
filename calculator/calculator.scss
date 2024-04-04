@@ -1,0 +1,196 @@
+/* 
+CSS RESET 
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+$color-bg-1:         #ff7a01;
+$color-bg-2:         #ff2849;
+$color-bg-calc:      #1c2632;
+$color-bg-btn:       #141c27;
+$color-bg-btn-hover: rgba(24, 32, 43, 0.771);
+$color-display-text: #ffffff;
+$color-board-clear:  #c23031;
+$color-board-light:  #bac0c9;
+$color-board-dark:   #404d5b;
+$color-shadow:       #00000053;
+
+$color-bg-1-light:         #ffe3f6;
+$color-bg-2-light:         #ffd4db;
+$color-bg-calc-light:      #fff;
+$color-bg-btn-light:       #fff;
+$color-bg-btn-hover-light: #fff2fa;
+$color-display-text-light: #1c2632;
+$color-board-clear-light:  #F7418F;
+$color-board-light-light:  #141c27;
+$color-board-dark-light:   #bac0c9;
+$color-shadow-light:       #00000021;
+
+/*
+$colors: $color-bg-1, $color-bg-2, $color-bg-calc, $color-bg-btn, $color-bg-btn-hover,
+$color-display-text, $color-board-clear, $color-board-light, $color-board-dark, $color-shadow;
+
+@for $i from 1 through length($colors) {
+    .color
+}*/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    list-style: none;
+    line-height: 1;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, 
+                                $color-bg-1 0%,
+                                $color-bg-2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    header#theme {
+
+        section#selector {
+
+            label {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 34px;
+
+                input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+                input:checked + span{
+                    background-color: white;
+                }
+                input:checked + span:before {
+                    transform: translateX(26px);
+                    background-color: $color-board-clear-light;
+                }
+
+                span {
+                    position: absolute;
+                    cursor: pointer;
+                    top:    0;
+                    left:   0;
+                    right:  0;
+                    bottom: 0;
+                    background-color: $color-bg-calc;
+                    border-radius: 50px;
+                    transition: .2s;
+                }
+                span:before {
+                    position: absolute;
+                    content: "";
+                    height: 26px;
+                    width: 26px;
+                    left: 4px;
+                    bottom: 4px;
+                    background-color: $color-board-clear;
+                    border-radius: 50px;
+                    transition: .2s;
+                    filter: drop-shadow(0px 0px 2px $color-shadow);
+                }
+            }
+        }
+    }
+
+    main#calculator {
+        width: 320px;
+        height: 480px;
+        background-color: $color-bg-calc;
+        filter: drop-shadow(0px 0px 40px $color-shadow);
+
+        section#display {
+            width: 100%;
+            height: 20%;
+
+            input {
+                color: white;
+                width: 90%;
+                margin-left: 5%;
+                height: 100%;
+                text-align: right;
+                font-size: 56px;
+                font-size: 56px;
+                background: none;
+            }
+            input::placeholder {
+                color: white;
+            }
+            input:focus {
+                outline: none;
+            }
+        }
+
+        section#board {
+            width: 100%;
+            height: 80%;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+
+            button {
+                background-color: $color-bg-btn;
+                color: $color-board-light;
+                border: 1px $color-bg-calc solid;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            button.clear {color: $color-board-clear}
+            .divide, .times, .minus, .plus, .equals {color: $color-board-dark}
+            button:hover {
+                background-color: $color-bg-btn-hover;
+            }
+            button:active {
+                scale: .95;
+            }
+        }
+    }
+}
+
+body.theme-light {
+    background: linear-gradient(150deg, 
+                                $color-bg-1-light 0%,
+                                $color-bg-2-light 100%);
+
+    main#calculator {
+        background-color: $color-bg-calc-light;
+
+        section#display {
+
+            input              {color: $color-bg-calc}
+            input::placeholder {color: $color-bg-calc}
+        }
+
+        section#board {
+
+            button {
+                background-color: $color-bg-btn-light;
+                color:            $color-board-light-light;
+                border:           none;
+                filter: drop-shadow(0 0 1px $color-shadow-light);
+            }
+            button.clear                                  {color:            $color-board-clear-light}
+            button.divide, .times, .minus, .plus, .equals {color:            $color-board-dark-light}
+            button:hover                                  {background-color: $color-bg-btn-hover-light}
+        }
+    }
+}
