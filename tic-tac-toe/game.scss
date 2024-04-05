@@ -8,6 +8,8 @@ $size-h1: 3rem;
 $size-h2: 1.5rem;
 $size-h3: 1.2rem;
 
+$size-btn-text: 1rem;
+
 $dark-color-bg :     #1e1e28;
 $dark-color-cell:    #fff9f0;
 $dark-color-player1: #15F5BA;
@@ -110,28 +112,45 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 1rem;
 
-            h2 {
-                font-size: $size-h2;
-                color: $dark-color-cell;
-                padding-bottom: 1rem;
+            button {
+                color: $dark-color-bg;
+                font-weight: 700;
+                background-color: $dark-color-cell;
+                width: 100%;
+                font-size: $size-btn-text;
+                padding: .3rem 0;
+                border-radius: .4rem;
             }
 
-            div {
+            div.points {
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: center;              
                 gap: 1rem;
-                padding: .3rem 1rem;
-                border-radius: 10px;
-                background-color: $dark-color-cell;
 
-                h3 {
-                    font-size: $size-h3;
+                h2 {
+                    font-size: $size-h2;
                     color: $dark-color-cell;
+                }
 
-                    span.player-1 {color: $dark-color-player1}
-                    span.player-2 {color: $dark-color-player2}
+                div.players {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+                    padding: .3rem .7rem;
+                    border-radius: .5rem;
+                    background-color: $dark-color-cell;
+
+                    h3 {
+                        font-size: $size-h3;
+                        color: $dark-color-cell;
+
+                        span.player-1 {color: $dark-color-player1}
+                        span.player-2 {color: $dark-color-player2}
+                    }
                 }
             }
         }

@@ -4,6 +4,8 @@ const player = document.getElementById('player-info');
 const points1 = document.getElementById('points-info-1');
 const points2 = document.getElementById('points-info-2');
 
+const reset = document.getElementById('reset');
+
 player.classList.add('player-1');
 
 const combinations = [
@@ -35,12 +37,7 @@ for (let i = 0; i < cells.length; i ++) {
         //check if players can play the game
         if (canPlay === true) {
             
-            /*
-            check wich one is playing
-            
-            flag  = player1
-            !flag = player2
-            */
+            //check wich one is playing
             if (flag === true) {
                     cells[i].classList.remove('player-2');
                     cells[i].classList.add('player-1');
@@ -96,7 +93,7 @@ function checkWinner() {
             player2Points ++;
             console.log('\x1b[35mplayer2 wins\x1b[0m');
             console.log('points2: ' + player2Points);
-            points1.innerText = player1Points;
+            points2.innerText = player2Points;
             canPlay = false;
             //add more logic (display message, add classes on css, end the game...)
 
@@ -106,6 +103,19 @@ function checkWinner() {
 
     console.log('\x1b[33mno winner yet o.o\x1b[0m');
 }
+
+//reset game
+reset.addEventListener('click', () => {
+    player1 = [];
+    player2 = [];
+    
+    for (let i = 0; i < cells.length; i ++) {
+        cells[i].innerHTML = "";
+    }
+    canPlay = true;
+
+
+});
 /*
 function checkWinner() {
     combinations.find((item) => {

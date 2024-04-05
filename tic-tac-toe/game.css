@@ -109,28 +109,43 @@ body main section#points {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
-body main section#points h2 {
-  font-size: 1.5rem;
-  color: #fff9f0;
-  padding-bottom: 1rem;
+body main section#points button {
+  color: #1e1e28;
+  font-weight: 700;
+  background-color: #fff9f0;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.3rem 0;
+  border-radius: 0.4rem;
 }
-body main section#points div {
+body main section#points div.points {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 0.3rem 1rem;
-  border-radius: 10px;
+}
+body main section#points div.points h2 {
+  font-size: 1.5rem;
+  color: #fff9f0;
+}
+body main section#points div.points div.players {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
   background-color: #fff9f0;
 }
-body main section#points div h3 {
+body main section#points div.points div.players h3 {
   font-size: 1.2rem;
   color: #fff9f0;
 }
-body main section#points div h3 span.player-1 {
+body main section#points div.points div.players h3 span.player-1 {
   color: #15F5BA;
 }
-body main section#points div h3 span.player-2 {
+body main section#points div.points div.players h3 span.player-2 {
   color: #6528F7;
 }/*# sourceMappingURL=game.css.map */
