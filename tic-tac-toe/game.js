@@ -1,6 +1,11 @@
 const cells = document.querySelectorAll('.cell');
 const player = document.getElementById('player-info');
 
+const points1 = document.getElementById('points-info-1');
+const points2 = document.getElementById('points-info-2');
+
+player.classList.add('player-1');
+
 const combinations = [
     [0, 1, 2],
     [3, 4, 5],
@@ -15,43 +20,57 @@ const combinations = [
 let player1 = [];
 let player2 = [];
 
-player.classList.add('player-1');
+let player1Points = 0;
+let player2Points = 0;
+
+let canPlay = true;
 let flag = true;
+
 
 //run throug the 'cells' array
 for (let i = 0; i < cells.length; i ++) {
-
+    
     cells[i].addEventListener('click', () => {
-        if (flag === true) {
-            cells[i].classList.remove('player-2');
-            cells[i].classList.add('player-1');
-            cells[i].innerHTML = 'x';
 
-            player.classList.remove('player-1');
-            player.classList.add('player-2');
-            player.innerText = '2';
+        //check if players can play the game
+        if (canPlay === true) {
+            
+            /*
+            check wich one is playing
+            
+            flag  = player1
+            !flag = player2
+            */
+            if (flag === true) {
+                    cells[i].classList.remove('player-2');
+                    cells[i].classList.add('player-1');
+                    cells[i].innerHTML = 'x';
 
-            player1.push(i);
-            flag = false;
-        } else {
-            cells[i].classList.remove('player-1');
-            cells[i].classList.add('player-2');
-            cells[i].innerHTML = 'o';
+                    player.classList.remove('player-1');
+                    player.classList.add('player-2');
+                    player.innerText = '2';
 
-            player.classList.remove('player-2');
-            player.classList.add('player-1');
-            player.innerText = '1';
+                    player1.push(i);
+                    flag = false;
+            } else {
+                    cells[i].classList.remove('player-1');
+                    cells[i].classList.add('player-2');
+                    cells[i].innerHTML = 'o';
 
-            player2.push(i);
-            flag = true;
+                    player.classList.remove('player-2');
+                    player.classList.add('player-1');
+                    player.innerText = '1';
+
+                    player2.push(i);
+                    flag = true;
+            }
+
+            checkWinner();
         }
-        checkWinner();
-        //console.log('player1: ' + player1);
-        //console.log('player2: ' + player2);
     });
 }
 
-
+//check for winner
 function checkWinner() {
     for (const combination of combinations) {
         const [a, b, c] = combination;
@@ -60,8 +79,11 @@ function checkWinner() {
         if (player1.includes(a) &&
             player1.includes(b) &&
             player1.includes(c)) {
+            player1Points ++;
             console.log('\x1b[36mplayer1 wins\x1b[0m');
-
+            console.log('points1: ' + player1Points);
+            points1.innerText = player1Points;
+            canPlay = false;
             //add more logic (display message, add classes on css, end the game...)
             
             return;
@@ -71,8 +93,11 @@ function checkWinner() {
         if (player2.includes(a) &&
             player2.includes(b) &&
             player2.includes(c)) {
+            player2Points ++;
             console.log('\x1b[35mplayer2 wins\x1b[0m');
-
+            console.log('points2: ' + player2Points);
+            points1.innerText = player1Points;
+            canPlay = false;
             //add more logic (display message, add classes on css, end the game...)
 
             return;
