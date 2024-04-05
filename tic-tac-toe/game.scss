@@ -12,8 +12,9 @@ $size-btn-text: 1rem;
 
 $dark-color-bg :     #1e1e28;
 $dark-color-cell:    #fff9f0;
-$dark-color-player1: #15F5BA;
-$dark-color-player2: #6528F7;
+$dark-color-player1: #836FFF;
+$dark-color-player2: #FF3EA5;
+$dark-color-tie:     #EBF400;
 $dark-color-title1:  #836FFF;
 $dark-color-title2:  #FF3EA5;
 $dark-color-title3:  #EBF400;
@@ -80,6 +81,7 @@ body {
 
                 span.player-1 {color: $dark-color-player1}
                 span.player-2 {color: $dark-color-player2}
+                span.tie      {color: $dark-color-tie;}
             }
         }
 
@@ -148,8 +150,9 @@ body {
                         font-size: $size-h3;
                         color: $dark-color-cell;
 
-                        span.player-1 {color: $dark-color-player1}
-                        span.player-2 {color: $dark-color-player2}
+                        span.player-1   {color: $dark-color-player1}
+                        span.player-2   {color: $dark-color-player2}
+                        span.player-tie {color: $dark-color-tie}
                     }
                 }
             }

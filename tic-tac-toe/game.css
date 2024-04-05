@@ -66,10 +66,13 @@ body main section#info h2 {
   color: #fff9f0;
 }
 body main section#info h2 span.player-1 {
-  color: #15F5BA;
+  color: #836FFF;
 }
 body main section#info h2 span.player-2 {
-  color: #6528F7;
+  color: #FF3EA5;
+}
+body main section#info h2 span.tie {
+  color: #EBF400;
 }
 body main section#board {
   display: grid;
@@ -99,10 +102,10 @@ body main section#board div.cell:nth-of-type(9) {
   border-radius: 0 0 0.5rem 0;
 }
 body main section#board div.player-1 {
-  color: #15F5BA;
+  color: #836FFF;
 }
 body main section#board div.player-2 {
-  color: #6528F7;
+  color: #FF3EA5;
 }
 body main section#points {
   display: flex;
@@ -144,8 +147,11 @@ body main section#points div.points div.players h3 {
   color: #fff9f0;
 }
 body main section#points div.points div.players h3 span.player-1 {
-  color: #15F5BA;
+  color: #836FFF;
 }
 body main section#points div.points div.players h3 span.player-2 {
-  color: #6528F7;
+  color: #FF3EA5;
+}
+body main section#points div.points div.players h3 span.player-tie {
+  color: #EBF400;
 }/*# sourceMappingURL=game.css.map */
