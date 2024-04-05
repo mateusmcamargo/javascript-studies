@@ -4,6 +4,10 @@
    License: none (public domain)
 */
 
+$size-h1: 3rem;
+$size-h2: 1.5rem;
+$size-h3: 1.2rem;
+
 $dark-color-bg :     #1e1e28;
 $dark-color-cell:    #fff9f0;
 $dark-color-player1: #15F5BA;
@@ -61,7 +65,7 @@ body {
 
 
             h1 {
-                font-size: 3rem;
+                font-size: $size-h1;
 
                 span:nth-of-type(1) {color: $dark-color-title1}
                 span:nth-of-type(2) {color: $dark-color-title2}
@@ -69,7 +73,7 @@ body {
             }
 
             h2 {
-                font-size: 1.5rem;
+                font-size: $size-h2;
                 color: $dark-color-cell;
 
                 span.player-1 {color: $dark-color-player1}
@@ -99,6 +103,37 @@ body {
             div.cell:nth-of-type(9) {border-radius: 0 0 $border-radius 0}
             div.player-1 {color: $dark-color-player1}
             div.player-2 {color: $dark-color-player2}
+        }
+
+        section#points {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h2 {
+                font-size: $size-h2;
+                color: $dark-color-cell;
+                padding-bottom: 1rem;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                padding: .3rem 1rem;
+                border-radius: 10px;
+                background-color: $dark-color-cell;
+
+                h3 {
+                    font-size: $size-h3;
+                    color: $dark-color-cell;
+
+                    span.player-1 {color: $dark-color-player1}
+                    span.player-2 {color: $dark-color-player2}
+                }
+            }
         }
     }
 }

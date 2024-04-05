@@ -103,4 +103,34 @@ body main section#board div.player-1 {
 }
 body main section#board div.player-2 {
   color: #6528F7;
+}
+body main section#points {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main section#points h2 {
+  font-size: 1.5rem;
+  color: #fff9f0;
+  padding-bottom: 1rem;
+}
+body main section#points div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  background-color: #fff9f0;
+}
+body main section#points div h3 {
+  font-size: 1.2rem;
+  color: #fff9f0;
+}
+body main section#points div h3 span.player-1 {
+  color: #15F5BA;
+}
+body main section#points div h3 span.player-2 {
+  color: #6528F7;
 }/*# sourceMappingURL=game.css.map */
