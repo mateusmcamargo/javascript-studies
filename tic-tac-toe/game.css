@@ -107,6 +107,7 @@ body main section#board div.cell {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 body main section#board div.cell:nth-of-type(1) {
   border-radius: 0.5rem 0 0 0;
