@@ -143,12 +143,9 @@ function checkWinner() {
             //display winner
             gameInfo.innerHTML = "<span id='player-info' class='player-1'>player 1 wins!</span>";
             return;
-        }
-        
-        //check if all cell in the combination belong to 'player2'
-        if (player2.includes(a) &&
-        player2.includes(b) &&
-        player2.includes(c)) {
+        } else if (player2.includes(a) && 
+                   player2.includes(b) &&
+                   player2.includes(c)) {
             //add point
             player2Points ++;
             pointsInfo2.innerText = player2Points;
@@ -159,20 +156,19 @@ function checkWinner() {
             //display winner
             gameInfo.innerHTML = "<span id='player-info' class='player-2'>player 2 wins!</span>";
             return;
-        }
+        } else  {
+            if (numMoves >= 9) { //check for a tie
+                //add point
+                tiePoints ++;
+                pointsInfoTie.innerText = tiePoints;
+                
+                //end game
+                canPlay = false;
 
-        //check for a tie
-        if (numMoves >= 9) {
-            //add point
-            tiePoints ++;
-            pointsInfoTie.innerText = tiePoints;
-            
-            //end game
-            canPlay = false;
-
-            //display tie
-            gameInfo.innerHTML = "<span class='tie'>tie!</span>";
-            return;
+                //display tie
+                gameInfo.innerHTML = "<span class='tie'>tie!</span>";
+                return;
+            }
         }
     }
 }
