@@ -19,4 +19,10 @@
 >
 
 ## tic-tac-toe
+> jogo da velha com dois jogadores.
 >
+>> #### assuntos estudados:
+>>
+>> - arrays
+>> - innerHTTML
+>> - push()
