@@ -62,7 +62,7 @@ body main section#info h1 span:nth-of-type(2) {
   color: #FF3EA5;
 }
 body main section#info h1 span:nth-of-type(3) {
-  color: #EBF400;
+  color: #45FFCA;
 }
 body main section#info h2 {
   font-size: 1.5rem;
@@ -75,7 +75,7 @@ body main section#info h2 span.player-2 {
   color: #FF3EA5;
 }
 body main section#info h2 span.tie {
-  color: #EBF400;
+  color: #45FFCA;
 }
 body main section#board {
   display: grid;
@@ -156,5 +156,5 @@ body main section#points div.points div.players h3 span.player-2 {
   color: #FF3EA5;
 }
 body main section#points div.points div.players h3 span.player-tie {
-  color: #EBF400;
+  color: #45FFCA;
 }/*# sourceMappingURL=game.css.map */
