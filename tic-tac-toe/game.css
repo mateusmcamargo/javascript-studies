@@ -82,6 +82,22 @@ body main section#board {
   grid-template-columns: 33% 33% 33%;
   gap: 0.5rem;
 }
+@keyframes color-blink-player-1 {
+  0% {
+    background-color: #836FFF;
+  }
+  100% {
+    background-color: #fff9f0;
+  }
+}
+@keyframes color-blink-player-2 {
+  0% {
+    background-color: #FF3EA5;
+  }
+  100% {
+    background-color: #fff9f0;
+  }
+}
 body main section#board div.cell {
   width: 8rem;
   height: 8rem;
@@ -110,6 +126,12 @@ body main section#board div.player-1 {
 body main section#board div.player-2 {
   color: #FF3EA5;
 }
+body main section#board div.animation-cell-player-1 {
+  animation: color-blink-player-1 0.15s ease-out;
+}
+body main section#board div.animation-cell-player-2 {
+  animation: color-blink-player-2 0.15s ease-out;
+}
 body main section#points {
   display: flex;
   flex-direction: column;
@@ -125,6 +147,14 @@ body main section#points button {
   font-size: 1rem;
   padding: 0.3rem 0;
   border-radius: 0.4rem;
+  cursor: pointer;
+  transition: 0.2s ease all, 0.01s ease-out transform;
+}
+body main section#points button:hover {
+  background-color: #45FFCA;
+}
+body main section#points button:active {
+  transform: scale(0.99);
 }
 body main section#points div.points {
   display: flex;

@@ -45,37 +45,66 @@ let flag     = true;
 
 //number of moves
 let numMoves = 0;
-
-
 //run throug the 'cell' array
 for (let i = 0; i < cell.length; i ++) {
     
-    //event listener for cell clicks
+    //event listener for cell mouseover (animation)
+    cell[i].addEventListener('mouseover', () => {
+        //check if players can make a move
+        if (canPlay === true && cell[i].innerHTML === "") {
+            //check wich one is playing
+            if (flag === true) {
+                //animation
+                cell[i].classList.remove('animation-cell-player-2')
+                cell[i].classList.add('animation-cell-player-1')
+            } else {
+                //animation
+                cell[i].classList.remove('animation-cell-player-1')
+                cell[i].classList.add('animation-cell-player-2')
+            }
+        }
+    });
+    
+    //event listener for cell mouseout (animation)
+    cell[i].addEventListener('mouseout', () => {
+        //animation
+        cell[i].classList.remove('animation-cell-player-2')
+        cell[i].classList.remove('animation-cell-player-1')
+        
+    });
+
+    //event listener for cell clicks (player move)
     cell[i].addEventListener('click', () => {
-        numMoves ++;
         
         //check if players can make a move
         if (canPlay === true && cell[i].innerHTML === "") {
+            numMoves ++;
+            cell[i].classList.remove('animation-cell-player-1');
+            cell[i].classList.remove('animation-cell-player-2');
             
             //check wich one is playing
             if (flag === true) {
                 //make the move
                 cell[i].classList.remove('player-2');
+                cell[i].classList.remove('animation-cell-player-2');
                 cell[i].classList.add('player-1');
+                cell[i].classList.add('animation-cell-player-1');
                 cell[i].innerHTML = 'x';
-
+                
                 //update game info
                 gameInfo.innerHTML = "player <span class='player-2'>2</span> turn"
-
+                
                 //add move to player array
                 player1.push(i);
-
+                
                 //change player
                 flag = false;
             } else {
                 //make the move
                 cell[i].classList.remove('player-1');
+                cell[i].classList.remove('animation-cell-player-1');
                 cell[i].classList.add('player-2');
+                cell[i].classList.add('animation-cell-player-2');
                 cell[i].innerHTML = 'o';
 
                 //update game info
