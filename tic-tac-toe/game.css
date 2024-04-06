@@ -17,6 +17,9 @@
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 /* HTML5 display-role reset for older browsers */
