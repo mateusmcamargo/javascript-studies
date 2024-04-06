@@ -53,9 +53,9 @@ for (let i = 0; i < cell.length; i ++) {
     //event listener for cell clicks
     cell[i].addEventListener('click', () => {
         numMoves ++;
-
+        
         //check if players can make a move
-        if (canPlay === true) {
+        if (canPlay === true && cell[i].innerHTML === "") {
             
             //check wich one is playing
             if (flag === true) {
