@@ -1,0 +1,202 @@
+/* RESET CSS
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  line-height: 1;
+  list-style: none;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  font-style: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 10px;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 6.4rem;
+  border-bottom: 4px solid #ffde25;
+}
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header nav ul {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header nav ul .divider {
+  width: 0.3rem;
+  height: 2rem;
+  background-color: #ffde25;
+}
+header nav ul li a {
+  font-size: 1.8rem;
+  color: #22222e;
+}
+header nav ul li:nth-of-type(1) a {
+  color: #ffde25;
+}
+header #title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main section#projects {
+  padding: 10rem 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  width: 80rem;
+  gap: 4rem 2rem;
+}
+main section#projects .chart {
+  width: 38rem;
+  height: 16rem;
+  display: flex;
+  flex-direction: row;
+  filter: drop-shadow(0 0 0.4rem rgba(204, 204, 204, 0.662745098));
+  border-radius: 1.2rem;
+}
+main section#projects .chart .title {
+  height: 100%;
+  width: 40%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  border-radius: 1.2rem 0 0rem 1.2rem;
+}
+main section#projects .chart .title h3 {
+  font-size: 3.2rem;
+  line-height: 1, 2;
+}
+main section#projects .chart .title h3 span {
+  font-size: 3.2rem;
+}
+main section#projects .chart .description {
+  width: 60%;
+  height: 100%;
+  border-radius: 0 1.2rem 1.2rem 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  gap: 2rem;
+}
+main section#projects .chart .description p {
+  line-height: 1.6;
+  font-size: 1.8rem;
+}
+main section#projects .chart .description .links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 2.4rem;
+}
+main section#projects .chart .description .links i {
+  padding-right: 0.4rem;
+}
+main section#projects .chart .description .links a {
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+main section#projects .chart.tic-tac-toe .title {
+  background-color: #1e1e28;
+}
+main section#projects .chart.tic-tac-toe .title h3 span:nth-of-type(1) {
+  color: #836FFF;
+}
+main section#projects .chart.tic-tac-toe .title h3 span:nth-of-type(2) {
+  color: #FF3EA5;
+}
+main section#projects .chart.tic-tac-toe .title h3 span:nth-of-type(3) {
+  color: #45FFCA;
+}
+main section#projects .chart.tic-tac-toe .description {
+  background-color: #fff9f0;
+}
+main section#projects .chart.tic-tac-toe .description p {
+  color: #1e1e28;
+}
+main section#projects .chart.tic-tac-toe .description .links i {
+  color: #1e1e28;
+}
+main section#projects .chart.tic-tac-toe .description .links a {
+  color: #1e1e28;
+}
+main section#projects .chart.tic-tac-toe .description .links a:hover {
+  color: #FF3EA5;
+}
+main section#projects .chart.counter {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+main section#projects .chart.counter .title {
+  background-color: #912BBC;
+}
+main section#projects .chart.counter .title h3 span:nth-of-type(1) {
+  color: #FFEBB2;
+}
+main section#projects .chart.counter .title h3 span:nth-of-type(2) {
+  color: #E9A89B;
+}
+main section#projects .chart.counter .title h3 span:nth-of-type(3) {
+  color: #E9A89B;
+  line-height: 0;
+  font-size: 5rem;
+}
+main section#projects .chart.counter .description {
+  background-color: #FFEBB2;
+}
+main section#projects .chart.counter .description p {
+  color: #1e1e28;
+}
+main section#projects .chart.counter .description .links i {
+  color: #1e1e28;
+}
+main section#projects .chart.counter .description .links a {
+  color: #1e1e28;
+}
+main section#projects .chart.counter .description .links a:hover {
+  color: #912BBC;
+}/*# sourceMappingURL=index.css.map */
