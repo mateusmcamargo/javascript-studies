@@ -128,6 +128,7 @@ function checkWinner() {
     //iterate each element in the 'combinations' array
     for (const combination of combinations) {
         const [a, b, c] = combination;
+        console.log([a, b, c]);
 
         //check if all cell in the combination belong to 'player1'
         if (player1.includes(a) &&
@@ -156,21 +157,23 @@ function checkWinner() {
             //display winner
             gameInfo.innerHTML = "<span id='player-info' class='player-2'>player 2 wins!</span>";
             return;
-        } else  {
-            if (numMoves >= 9) { //check for a tie
-                //add point
-                tiePoints ++;
-                pointsInfoTie.innerText = tiePoints;
-                
-                //end game
-                canPlay = false;
-
-                //display tie
-                gameInfo.innerHTML = "<span class='tie'>tie!</span>";
-                return;
-            }
         }
     }
+
+    if (numMoves >= 9) { //check for a tie
+        //add point
+        tiePoints ++;
+        pointsInfoTie.innerText = tiePoints;
+        
+        //end game
+        canPlay = false;
+
+        //display tie
+        gameInfo.innerHTML = "<span class='tie'>tie!</span>";
+        return;
+    }
+
+    console.log('---');
 }
 
 //reset game
