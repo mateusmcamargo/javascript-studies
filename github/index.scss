@@ -106,7 +106,7 @@ header {
             li:nth-of-type(1) {
                 a {
                     color: $color-h;
-                    background-color: red;
+                    background-color: $color-js;
                     padding: .4rem .6rem;
                     border-radius: .4rem;
                 }

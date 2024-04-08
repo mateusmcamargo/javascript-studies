@@ -18,3 +18,7 @@ const clock = setInterval(function time() {
     hours.textContent = hour;
     minutes.textContent = min;
 });
+
+/*
+miniatura da aplicação seguindo o mouse no evento mouseover do chart
+*/
