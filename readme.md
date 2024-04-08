@@ -1,15 +1,18 @@
 # javascript-studies
 
-## Hub dos projetos
-[Site com os projetos](https://mateusmcamargo.github.io/javascript-studies/)
+## 💻 [Hub Online dos projetos](https://mateusmcamargo.github.io/javascript-studies/)
+> site aberto no próprio github com os projetos expostos em charts.
 
-## calculator
+## #️⃣ tic-tac-toe
+> jogo da velha com dois jogadores.
 >
+>> #### assuntos estudados:
+>>
+>> - arrays
+>> - innerHTTML
+>> - push()
 
-## counter
->
-
-## digital-clock
+## 🕓 digital-clock
 > relógio digital básico, feito com o objeto 'Date'.
 >
 >> #### assuntos estudados:
@@ -18,14 +21,11 @@
 >> - uso do objeto **Date** para obtenção de horários
 >> - identação dos números no relógio
 
-## ios-calculator
+## calculator
 >
 
-## tic-tac-toe
-> jogo da velha com dois jogadores.
+## counter
 >
->> #### assuntos estudados:
->>
->> - arrays
->> - innerHTTML
->> - push()
+
+## ios-calculator
+>
