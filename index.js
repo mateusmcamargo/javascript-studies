@@ -1,5 +1,7 @@
 const hours   = document.getElementById('hours');
 const minutes = document.getElementById('minutes');
+const chart   = document.querySelectorAll('chart');
+
 /*
 - temporizer function that updates the clock in real time using the 'Date' object to get current time from the computer system.
 - the 'setInterval' function allows a repeating action in a set interval. It is used here to update the clock every second.
@@ -17,6 +19,14 @@ const clock = setInterval(function time() {
     //applies the data to each HTML element
     hours.textContent = hour;
     minutes.textContent = min;
+});
+
+chart.addEventListener('click', (e) => {
+
+    alert('a')
+    var x = e.clientX; 
+    var y = e.clientY; 
+
 });
 
 /*

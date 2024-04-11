@@ -6,7 +6,7 @@
 ## #️⃣ tic-tac-toe
 > jogo da velha com dois jogadores.
 >
->> #### assuntos estudados:
+>> ### assuntos estudados:
 >>
 >> - arrays
 >> - innerHTTML
@@ -15,7 +15,7 @@
 ## 🕓 digital-clock
 > relógio digital básico, feito com o objeto 'Date'.
 >
->> #### assuntos estudados:
+>> ### assuntos estudados:
 >>
 >> - diferentes temas de cores usando **classList()** e **select**
 >> - uso do objeto **Date** para obtenção de horários
