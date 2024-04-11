@@ -28,54 +28,106 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: #1e1e28;
-}
-body main {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-}
-body main section#info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-}
-body main section#info h1 {
-  font-size: 3rem;
-}
-body main section#info h1 span:nth-of-type(1) {
-  color: #836FFF;
-}
-body main section#info h1 span:nth-of-type(2) {
-  color: #FF3EA5;
-}
-body main section#info h1 span:nth-of-type(3) {
-  color: #45FFCA;
-}
-body main section#info h2 {
-  font-size: 1.5rem;
-  color: #fff9f0;
-}
-body main section#info h2 span.player-1 {
-  color: #836FFF;
-}
-body main section#info h2 span.player-2 {
-  color: #FF3EA5;
-}
-body main section#info h2 span.tie {
-  color: #45FFCA;
+body { /*
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+width: 100vw;
+background-color: $dark-color-bg;
+*/ }
+body main { /*
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+
+        section#info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+
+
+            h1 {
+                font-size: $size-h1;
+
+                span:nth-of-type(1) {color: $dark-color-title1}
+                span:nth-of-type(2) {color: $dark-color-title2}
+                span:nth-of-type(3) {color: $dark-color-title3}
+            }
+
+            h2 {
+                font-size: $size-h2;
+                color: $dark-color-cell;
+
+                span.player-1 {color: $dark-color-player1}
+                span.player-2 {color: $dark-color-player2}
+                span.tie      {color: $dark-color-tie;}
+            }
+        }
+*/
+  /*
+          section#points {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: 1rem;
+
+              button {
+                  color: $dark-color-bg;
+                  font-weight: 700;
+                  background-color: $dark-color-cell;
+                  width: 100%;
+                  font-size: $size-btn-text;
+                  padding: .3rem 0;
+                  border-radius: .4rem;
+                  cursor: pointer;
+                  transition: .2s ease all, .01s ease-out transform;
+              }
+              button:hover {
+                  background-color: $dark-color-tie;
+              }
+              button:active {
+                  transform: scale(.99);
+              }
+
+              div.points {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;              
+                  gap: 1rem;
+
+                  h2 {
+                      font-size: $size-h2;
+                      color: $dark-color-cell;
+                  }
+
+                  div.players {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      gap: 1rem;
+                      padding: .3rem .7rem;
+                      border-radius: .5rem;
+                      background-color: $dark-color-cell;
+
+                      h3 {
+                          font-size: $size-h3;
+                          color: $dark-color-cell;
+
+                          span.player-1   {color: $dark-color-player1}
+                          span.player-2   {color: $dark-color-player2}
+                          span.player-tie {color: $dark-color-tie}
+                      }
+                  }
+              }
+          }*/
 }
 body main section#board {
   display: grid;
@@ -133,59 +185,46 @@ body main section#board div.animation-cell-player-1 {
 body main section#board div.animation-cell-player-2 {
   animation: color-blink-player-2 0.15s ease-out;
 }
-body main section#points {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-body main section#points button {
-  color: #1e1e28;
-  font-weight: 700;
-  background-color: #fff9f0;
-  width: 100%;
-  font-size: 1rem;
-  padding: 0.3rem 0;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  transition: 0.2s ease all, 0.01s ease-out transform;
-}
-body main section#points button:hover {
-  background-color: #45FFCA;
-}
-body main section#points button:active {
-  transform: scale(0.99);
-}
-body main section#points div.points {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-body main section#points div.points h2 {
-  font-size: 1.5rem;
-  color: #fff9f0;
-}
-body main section#points div.points div.players {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 0.5rem;
-  background-color: #fff9f0;
-}
-body main section#points div.points div.players h3 {
-  font-size: 1.2rem;
-  color: #fff9f0;
-}
-body main section#points div.points div.players h3 span.player-1 {
-  color: #836FFF;
-}
-body main section#points div.points div.players h3 span.player-2 {
-  color: #FF3EA5;
-}
-body main section#points div.points div.players h3 span.player-tie {
-  color: #45FFCA;
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: #1e1e28;
+    width: 100vw;
+    height: 100vh;
+  }
+  section#board {
+    width: 100%;
+  }
+  section#board div.cell {
+    width: 33.3333333333vw;
+    width: 33.3333333333vw;
+    font-size: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  section#board div.cell:nth-of-type(1) {
+    border-radius: 0;
+  }
+  section#board div.cell:nth-of-type(3) {
+    border-radius: 0 0 0 0;
+  }
+  section#board div.cell:nth-of-type(7) {
+    border-radius: 0 0 0 0;
+  }
+  section#board div.cell:nth-of-type(9) {
+    border-radius: 0 0 0 0;
+  }
+  section#board div.player-1 {
+    color: #836FFF;
+  }
+  section#board div.player-2 {
+    color: #FF3EA5;
+  }
+  section#board div.animation-cell-player-1 {
+    animation: color-blink-player-1 0.15s ease-out;
+  }
+  section#board div.animation-cell-player-2 {
+    animation: color-blink-player-2 0.15s ease-out;
+  }
 }/*# sourceMappingURL=game.css.map */

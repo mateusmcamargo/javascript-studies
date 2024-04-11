@@ -43,15 +43,15 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-body {
+body {/*
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 100vw;
     background-color: $dark-color-bg;
-    
-    main {
+    */
+    main {/*
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
@@ -85,7 +85,7 @@ body {
                 span.tie      {color: $dark-color-tie;}
             }
         }
-
+*/
         section#board {
             display: grid;
             grid-template-columns: 33% 33% 33%;
@@ -121,7 +121,7 @@ body {
             div.animation-cell-player-1 {animation: color-blink-player-1 .15s ease-out}
             div.animation-cell-player-2 {animation: color-blink-player-2 .15s ease-out}
         }
-
+/*
         section#points {
             display: flex;
             flex-direction: column;
@@ -177,6 +177,37 @@ body {
                     }
                 }
             }
+        }*/
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        background-color: $dark-color-bg;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    section#board {
+        width: 100%;
+        
+        div.cell {
+            width: calc(100vw / 3);
+            width: calc(100vw / 3);
+            font-size: 10rem;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
+        div.cell:nth-of-type(1) {border-radius: 0}
+        div.cell:nth-of-type(3) {border-radius: 0 0 0 0}
+        div.cell:nth-of-type(7) {border-radius: 0 0 0 0}
+        div.cell:nth-of-type(9) {border-radius: 0 0 0 0}
+        div.player-1 {color: $dark-color-player1}
+        div.player-2 {color: $dark-color-player2}
+        div.animation-cell-player-1 {animation: color-blink-player-1 .15s ease-out}
+        div.animation-cell-player-2 {animation: color-blink-player-2 .15s ease-out}
     }
 }
